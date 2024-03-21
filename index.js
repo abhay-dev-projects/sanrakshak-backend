@@ -10,7 +10,7 @@ import policeRouter from "./routes/policeRoutes.js";
 import superRouter from "./routes/superRoutes.js";
 
 const app = express();
-app.use(bodyParser.json({ limit: '35mb' }));
+app.use(bodyParser.json({ limit: '50mb' }));
 
 // adding middleware
 app.use(
@@ -42,7 +42,7 @@ const databaseConnection = async () => {
   try {
     await connectDb(process.env.MONGO_URL);
     app.get("/", (req, res) => {
-      res.send("Hi Welcome Kavach Backend")
+      res.send("Hi Welcome Sanrakshak Backend")
     })
   } catch (error) {
     console.log(error);

@@ -17,25 +17,15 @@ const schema = new mongoose.Schema({
   password: {
     type: String,
   },
-  city: {
-    type: String,
-  },
   role: {
     type: String,
   },
   googleId: {
     type: String
   },
-  feedbackId: {
+  caseId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Feedbacks',
-  },
-  available: {
-    type: Boolean
-  },
-  firId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Firs',
+    ref: 'Cases',
   },
 }, { timestamps: true });
 
